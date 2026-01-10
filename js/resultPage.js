@@ -48,7 +48,7 @@ else if (40 < greenPercentage && greenPercentage < 70) {
 
 tryAgainButton.addEventListener('click', () => {
     clearQuizStorage();
-    window.location.href = "../html/quizPage.html";
+    window.location.href = "html/quizPage.html";
 })
 
 homeButton.addEventListener('click', () => {
