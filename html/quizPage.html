@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Page</title>
+
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/quizPage.css">
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="logo-div">
+            <a href="./index.html" class="logo-p">
+                <img src="/images/quiz-logo-white-theme.png" alt="not found">
+            </a>
+        </div>
+        <div class="nav-links">
+            <div class="nav-links-top">
+                <div class="home-div nav-div">
+                    <a href="./index.html" class="home nav-a">Home</a>
+                </div>
+                <div class="category-div nav-div">
+                    <a href="" class="category nav-a" id="category-id">Category</a>
+                </div>
+                <div class="about-div nav-div">
+                    <a href="" class="about nav-a">About</a>
+                </div>
+            </div>
+            <div class="nav-links-dropdown">
+                <ul class="nav-links-ul">
+                    <a href="./htmlPage.html">
+                        <li type="none" class="li-text">HTML</li>
+                    </a>
+                    <a href="./cssPage.html">
+                        <li type="none" class="li-text">CSS</li>
+                    </a>
+                    <a href="./jsPage.html">
+                        <li type="none" class="li-text">JS</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="quiz-header">
+                <div class="quiz-title">
+                    <h1 id="quiz-title-h1"></h1>
+                </div>
+                <div class="quiz-header-footer">
+                    <div class="total-questions-div">
+                        <p id="present-question-number-p"></p>
+                    </div>
+                    <div class="timer-div">
+                        <p id="timer">10:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-question-div">
+                <span class="question-number" id="question-number-span">
+
+                </span>
+                <span class="question-text" id="question-text">
+
+                </span>
+            </div>
+
+            <div class="quiz-options-div" id="options-div">
+
+            </div>
+
+            <div class="quiz-footer">
+                <button class="btn skip-btn" id="skip-btn">
+                    skip
+                </button>
+                <button class="btn next-btn" id="next-btn">
+                    next
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <script type="module" src="/js/quizPage.js"></script>
+</body>
+
+</html>

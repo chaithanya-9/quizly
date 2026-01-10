@@ -1,0 +1,136 @@
+@import url("./index.css");
+
+header {
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding-inline: 3em;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #F7F8FA;
+}
+
+.logo-div {
+    /* border: 2px solid red; */
+    background-color: transparent;
+    width: 8rem;
+    height: 4rem;
+    border-radius: 8%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-div img {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    transform: scale(1.6);
+}
+
+header a {
+    text-decoration: transparent;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.nav-links-top {
+    /* border: 2px solid red; */
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+}
+
+.nav-div {
+    /* border: 2px solid blue; */
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-a {
+    color: #111827;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color .25s ease-in-out, font-size .25s ease-in-out;
+}
+
+.category-div {
+    width: 7rem;
+}
+
+.nav-a:hover {
+    color: #EA580C;
+    font-size: 17.8px;
+}
+
+.nav-links-dropdown {
+    padding-top: .8em;
+    position: absolute;
+    z-index: 2;
+    top: 1.2rem;
+    left: 12rem;
+    transform: scale(0);
+    background-color: transparent;
+    transition: transform .25s ease;
+    transform-origin: top;
+}
+
+.nav-links:has(.category:hover) .nav-links-dropdown {
+    transform: scale(1);
+}
+
+.nav-links-dropdown:hover {
+    transform: scale(1);
+}
+
+.nav-links-ul {
+    background-color: rgba(255, 255, 255, 0.15);
+    width: 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links-ul a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.nav-links-ul a li {
+    /* border: 2px solid red; */
+    padding: .4em 0;
+    width: 100%;
+    text-align: center;
+    transition: background-color .25s ease;
+    cursor: pointer;
+}
+
+.nav-links-ul a:hover li {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.li-text {
+    width: 100%;
+    display: block;
+    background-color: transparent;
+    transition: color .25s ease;
+}
+
+.li-text:hover {
+    color: #EA580C;
+}
