@@ -118,7 +118,7 @@ skipButton.addEventListener('click', () => {
         timer.textContent = "00:00";
         time();
         sendToLocalStorage();
-        window.location.href = "resultPage.html";
+        window.location.href = "../html/resultPage.html";
     }
 })
 
