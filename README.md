@@ -3,6 +3,12 @@
 Quizly is a web-based quiz application developed using HTML, CSS, and JavaScript.  
 The project demonstrates strong frontend fundamentals, focusing on clean structure, dynamic content handling, and responsive user interface design without relying on external libraries or frameworks.
 
+## Live Demo
+
+https://chaithanya-9.github.io/quizly/
+
+(Deployed using GitHub Pages)
+
 ## Overview
 
 The application allows users to select quiz categories, attempt multiple-choice questions, and view their final score along with a result summary. The entire quiz flow is handled on the client side using vanilla JavaScript.
