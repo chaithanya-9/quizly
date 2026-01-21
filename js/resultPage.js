@@ -1,9 +1,9 @@
 const header = document.getElementById("header");
-const percentageDiv = document.getElementById("percentage-id");
 const percentageText = document.getElementById("percentage-text-id");
 const scorePTag = document.getElementById("score-p");
 const totalTime = document.getElementById("total-time");
 const quote = document.getElementById("quote");
+const progressCircle = document.querySelector(".progress-ring-fill");
 
 const homeButton = document.getElementById("go-home-btn");
 const tryAgainButton = document.getElementById("try-again-btn");
@@ -30,11 +30,24 @@ function clearQuizStorage() {
 
 function renderResultPage() {
     disableHeader();
-    percentageDiv.style.background = `conic-gradient( #27ce6dff 0% ${greenPercentage}%, 
-    #dd4534ff ${greenPercentage}% 100%)`;
-    percentageText.textContent = `${greenPercentage}%`;
+
+    const radius = 90;
+    const circumference = 2 * Math.PI * radius;
+    progressCircle.style.transition = "none";
+    progressCircle.style.strokeDasharray = `${circumference}`;
+    progressCircle.style.strokeDashoffset = circumference;
+
+    percentageText.textContent = "0%";
+    progressCircle.getBoundingClientRect();
+    progressCircle.style.transition = "stroke-dashoffset 1s ease-out";
     scorePTag.textContent = `Score: ${score}/${totalQuestions}`;
     totalTime.textContent = `Time Taken: ${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+
+    setTimeout(() => {
+        const offset = circumference - (greenPercentage / 100) * circumference;
+        progressCircle.style.strokeDashoffset = offset;
+        percentageText.textContent = `${greenPercentage}%`;
+    }, 100);
 }
 
 if (0 <= greenPercentage && greenPercentage < 40) {

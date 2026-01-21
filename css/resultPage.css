@@ -52,30 +52,38 @@ body {
 
 .percentage-div {
     /* border: 2px solid red; */
-    min-height: 250px;
+    min-height: 200px;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: start;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.percentage {
+.progress-ring {
     /* border: 2px solid black; */
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    box-shadow: 0 0 10px rgb(157, 156, 156);
+    transform: rotate(-90deg);
+}
+
+.progress-ring-fill {
+    /* transform: rotate(180deg); */
+    stroke: #F97316;
+    stroke-linecap: butt;
+    transition: stroke-dashoffset 1s ease;
+}
+
+.progress-ring-bg {
+    stroke: #e5e7eb;
 }
 
 .percentage-text {
     /* border: 2px solid white; */
     z-index: 2;
-    font-size: 28px;
-    color: white;
+    font-size: 32px;
+    color: #F97316;
+    font-weight: 700;
     position: absolute;
-    background: transparent;
-    top: 110px;
+    top: 50%;
     left: 50.5%;
     font-family: Arial, Helvetica, sans-serif;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
